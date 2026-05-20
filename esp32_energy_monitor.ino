@@ -9,7 +9,7 @@ Adafruit_ADS1115 ads;
 // 400 samples at 860SPS captures about 0.46 seconds (23 full 50Hz cycles)
 #define SAMPLES 400
 
-// ===== CALIBRATION (As requested) =====
+// ===== CALIBRATION =====
 #define V_CALIBRATION 306
 #define I_CALIBRATION 2.36
 
@@ -118,11 +118,7 @@ void loop()
         digitalWrite(RELAY_PIN, HIGH);
     }
 
-    // --- PHASE 4: Serial Output ---
-    // Serial.print("Vrms: "); Serial.print(Vrms, 1); Serial.print("V | ");
-    // Serial.print("Irms: "); Serial.print(Irms, 4); Serial.print("A | ");
-    // Serial.print("Watt: "); Serial.print(realPower, 2); Serial.print("W | ");
-    // Serial.print("PF: ");   Serial.println(pf, 3);
+    // --- PHASE 4: Serial Output --
     Serial.print("Vrms: ");
     Serial.print(Vrms, 1);
     Serial.print("V | Irms: ");
